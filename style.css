@@ -70,6 +70,12 @@ a:hover{text-decoration:underline}
 .marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite;color:var(--muted);font-weight:600;letter-spacing:.04em;white-space:nowrap}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
+/* about photo */
+.about-photo{float:right;width:252px;margin:6px 0 14px 28px}
+.about-photo img{width:100%;display:block;border-radius:14px;border:1px solid var(--card-border);box-shadow:0 16px 36px rgba(0,0,0,.45)}
+#about .container::after{content:"";display:block;clear:both}
+@media (max-width:640px){.about-photo{float:none;width:min(300px,100%);margin:0 auto 18px}}
+
 /* sections */
 .section{padding:66px 0;position:relative}
 .section-alt{background:var(--bg-alt)}
