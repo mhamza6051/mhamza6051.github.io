@@ -31,7 +31,7 @@ a:hover{text-decoration:underline}
 .nav-cta:hover{background:rgba(56,189,248,.12)}
 
 /* hero — cosmic midnight base + canvas backdrop (hero-canvas.js) */
-.hero{padding:76px 0 58px;position:relative;overflow:hidden;background:
+.hero{padding:76px 0 0;position:relative;overflow:hidden;background:
   radial-gradient(1100px 520px at 78% 112%, rgba(168,85,247,.14), transparent 60%),
   radial-gradient(900px 500px at 86% -10%, rgba(0,240,255,.10), transparent 55%),
   linear-gradient(160deg,#060919 0%,#0B1126 100%)}
@@ -41,9 +41,9 @@ a:hover{text-decoration:underline}
   linear-gradient(90deg, rgba(6,9,25,.78) 0%, rgba(6,9,25,.55) 42%, rgba(6,9,25,.08) 72%, rgba(6,9,25,0) 100%),
   radial-gradient(700px 420px at 28% 45%, rgba(6,9,25,.50), transparent 70%)}
 .hero-inner{display:flex;gap:36px;align-items:flex-start;position:relative;z-index:2}
-.avatar-wrap{flex-shrink:0;position:relative}
-.avatar{width:156px;height:156px;border-radius:50%;display:block;padding:4px;background:var(--grad);animation:ringpulse 3.2s ease-in-out infinite}
-@keyframes ringpulse{0%,100%{box-shadow:0 0 0 0 rgba(167,139,250,.45)}50%{box-shadow:0 0 0 16px rgba(167,139,250,0)}}
+.hero-text{flex:1;min-width:0;padding-bottom:58px}
+.hero-portrait{flex-shrink:0;align-self:flex-end;line-height:0}
+.hero-portrait img{height:480px;width:auto;display:block;filter:drop-shadow(0 20px 36px rgba(0,0,0,.55))}
 .eyebrow{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin-bottom:10px}
 .hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:12px}
 .grad-text{background:var(--grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradslide 6s ease-in-out infinite alternate}
@@ -69,12 +69,6 @@ a:hover{text-decoration:underline}
 .marquee-inner{max-width:1080px;margin:0 auto;border:1px solid var(--card-border);border-radius:999px;background:rgba(16,26,48,.65);overflow:hidden;padding:9px 0}
 .marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite;color:var(--muted);font-weight:600;letter-spacing:.04em;white-space:nowrap}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* about photo */
-.about-photo{float:right;width:252px;margin:6px 0 14px 28px}
-.about-photo img{width:100%;display:block;border-radius:14px;border:1px solid var(--card-border);box-shadow:0 16px 36px rgba(0,0,0,.45)}
-#about .container::after{content:"";display:block;clear:both}
-@media (max-width:640px){.about-photo{float:none;width:min(300px,100%);margin:0 auto 18px}}
 
 /* sections */
 .section{padding:66px 0;position:relative}
@@ -130,11 +124,14 @@ footer{border-top:1px solid var(--card-border);padding:22px 0;color:var(--muted)
 @media (max-width:720px){
   .hero-inner{flex-direction:column}
   .hero h1{font-size:1.85rem}
+  .hero-text{padding-bottom:24px}
+  .hero-portrait{align-self:center}
+  .hero-portrait img{height:330px}
   .nav nav a{margin-left:14px}
   .hero-stats{gap:22px}
   .grid.featured{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
-  .orb,.avatar,.grad-text,.marquee-track{animation:none}
+  .orb,.grad-text,.marquee-track{animation:none}
   .reveal{opacity:1;transform:none;transition:none}
 }
