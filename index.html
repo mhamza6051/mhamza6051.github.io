@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<div class="bg-orbs" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+
 <header class="nav">
   <div class="container nav-inner">
     <a class="brand" href="#top">Muhammad&nbsp;Hamza</a>
@@ -24,28 +26,37 @@
 
 <section class="hero" id="top">
   <div class="container hero-inner">
-    <img class="avatar" src="https://github.com/mhamza6051.png?size=240" alt="Muhammad Hamza">
-    <div>
-      <p class="eyebrow">Data Scientist · AI / ML / Deep Learning</p>
-      <h1>I build machine-learning systems —<br>and I report what actually happened.</h1>
-      <p class="hero-sub">Computer vision, network security, speech AI, forecasting and optimization.
-      Every project below is public on GitHub with its real numbers — including the experiments that failed,
+    <div class="avatar-wrap reveal">
+      <img class="avatar" src="https://github.com/mhamza6051.png?size=240" alt="Muhammad Hamza">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Data Scientist</p>
+      <h1>I build <span class="grad-text">machine-learning systems</span> —<br>and I report what actually happened.</h1>
+      <p class="typing-line">Working in <span id="typed"></span><span class="caret">|</span></p>
+      <p class="hero-sub">Every project below is public on GitHub with its real numbers — including the experiments that failed,
       because that's what makes the successes believable.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">View projects</a>
         <a class="btn btn-ghost" href="https://github.com/mhamza6051" target="_blank" rel="noopener">github.com/mhamza6051</a>
       </div>
       <div class="hero-stats">
-        <div><strong>13</strong><span>public projects</span></div>
-        <div><strong>2.5M+</strong><span>records in largest dataset</span></div>
-        <div><strong>7</strong><span>deployed Streamlit apps</span></div>
+        <div><strong><span class="count" data-target="13">0</span></strong><span>public projects</span></div>
+        <div><strong><span class="count" data-target="2.5" data-decimal="1">0</span>M+</strong><span>records in largest dataset</span></div>
+        <div><strong><span class="count" data-target="7">0</span></strong><span>deployed Streamlit apps</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Python ✦ PyTorch ✦ TensorFlow ✦ YOLOv8 ✦ scikit-learn ✦ XGBoost ✦ wav2vec2 ✦ Qiskit ✦ Streamlit ✦ pandas ✦ Plotly ✦ librosa ✦&nbsp;</span>
+    <span>Python ✦ PyTorch ✦ TensorFlow ✦ YOLOv8 ✦ scikit-learn ✦ XGBoost ✦ wav2vec2 ✦ Qiskit ✦ Streamlit ✦ pandas ✦ Plotly ✦ librosa ✦&nbsp;</span>
+  </div>
+</div>
+
 <section id="about" class="section">
-  <div class="container">
+  <div class="container reveal">
     <h2>About</h2>
     <p class="lead">I'm Muhammad Hamza, a data scientist focused on applied AI, machine learning and deep learning.
     My work spans dental-imaging AI, cyber-attack detection on 2.5 million network flows, Urdu speech-emotion
@@ -60,21 +71,21 @@
 
 <section id="skills" class="section section-alt">
   <div class="container">
-    <h2>Skills</h2>
+    <h2 class="reveal">Skills</h2>
     <div class="skill-groups">
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3>Machine Learning</h3>
         <p>scikit-learn · XGBoost · Random Forest · SVM · Logistic Regression · hyperparameter tuning · class-imbalance handling · leakage control · cross-validation</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3>Deep Learning</h3>
         <p>PyTorch · TensorFlow/Keras · CNNs (SRCNN) · YOLOv8 object detection · wav2vec2 / Transformers · spectrogram models · transfer learning</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3>Data &amp; Engineering</h3>
         <p>Python · pandas · NumPy · data wrangling at 2.5M-row scale · EDA &amp; visualization (Matplotlib, Seaborn, Plotly) · Streamlit apps · Git &amp; GitHub</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3>Specialized</h3>
         <p>QUBO &amp; Qiskit optimization · metamorphic &amp; adversarial testing (IBM ART) · time-series forecasting · audio processing (librosa) · model evaluation &amp; honest reporting</p>
       </div>
@@ -84,45 +95,57 @@
 
 <section id="projects" class="section">
   <div class="container">
-    <h2>Featured projects</h2>
+    <h2 class="reveal">Featured projects</h2>
     <div class="grid featured">
 
-      <article class="card" data-cat="dl">
-        <p class="card-cat">Deep Learning · Computer Vision</p>
-        <h3>Dental X-Ray Super-Resolution &amp; Disease Detection</h3>
-        <p>SRCNN image enhancement (PSNR 27.34 dB, SSIM 0.858) + YOLOv8 detection of cavities, fillings, implants and impacted teeth on 1,269 X-rays — including the honest finding that the "enhanced" retrain performed worse (mAP@50 0.560 vs 0.809), so the baseline ships.</p>
-        <p class="card-metric">YOLOv8 mAP@50 <strong>0.809</strong></p>
-        <a class="card-link" href="https://github.com/mhamza6051/Dental-XRay-Super-Resolution-and-Disease-Detection" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <article class="card card-img reveal" data-cat="dl">
+        <div class="card-media"><img src="img/dental.jpg" alt="Dental X-ray with AI detection boxes" loading="lazy"></div>
+        <div class="card-body">
+          <p class="card-cat">Deep Learning · Computer Vision</p>
+          <h3>Dental X-Ray Super-Resolution &amp; Disease Detection</h3>
+          <p>SRCNN image enhancement (PSNR 27.34 dB, SSIM 0.858) + YOLOv8 detection of cavities, fillings, implants and impacted teeth on 1,269 X-rays — including the honest finding that the "enhanced" retrain performed worse (mAP@50 0.560 vs 0.809), so the baseline ships.</p>
+          <p class="card-metric">YOLOv8 mAP@50 <strong>0.809</strong></p>
+          <a class="card-link" href="https://github.com/mhamza6051/Dental-XRay-Super-Resolution-and-Disease-Detection" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </article>
 
-      <article class="card" data-cat="ml">
-        <p class="card-cat">Machine Learning · Cybersecurity</p>
-        <h3>Cyber Attack Detection — CICIDS2017</h3>
-        <p>Intrusion detection over 2.5M cleaned network flows. The first model scored 99.85% accuracy but 0.84 macro F1 — it ignored rare attacks. After balancing 12 classes, a tuned XGBoost delivers 94.4% accuracy with 0.94 macro F1.</p>
-        <p class="card-metric">Tuned XGBoost accuracy <strong>94.4%</strong> · macro F1 <strong>0.94</strong></p>
-        <a class="card-link" href="https://github.com/mhamza6051/Cyber-Attack-Detection-Using-Machine-Learning" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <article class="card card-img reveal" data-cat="ml">
+        <div class="card-media"><img src="img/cyber.jpg" alt="Global network map with a highlighted intrusion stream" loading="lazy"></div>
+        <div class="card-body">
+          <p class="card-cat">Machine Learning · Cybersecurity</p>
+          <h3>Cyber Attack Detection — CICIDS2017</h3>
+          <p>Intrusion detection over 2.5M cleaned network flows. The first model scored 99.85% accuracy but 0.84 macro F1 — it ignored rare attacks. After balancing 12 classes, a tuned XGBoost delivers 94.4% accuracy with 0.94 macro F1.</p>
+          <p class="card-metric">Tuned XGBoost accuracy <strong>94.4%</strong> · macro F1 <strong>0.94</strong></p>
+          <a class="card-link" href="https://github.com/mhamza6051/Cyber-Attack-Detection-Using-Machine-Learning" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </article>
 
-      <article class="card" data-cat="ml">
-        <p class="card-cat">Machine Learning · Quantum Optimization</p>
-        <h3>Precision Agriculture — Yield &amp; Resource Optimization</h3>
-        <p>Yield prediction (R² 0.875) and water/fertilizer recommendation on fused WaPOR, climate and soil data — then the allocation is optimized three ways: classical search, QUBO brute force and Qiskit's exact solver. All three agree.</p>
-        <p class="card-metric">3 solvers · 1 identical optimum <strong>(280, 180)</strong></p>
-        <a class="card-link" href="https://github.com/mhamza6051/Precision-Agriculture-Yield-and-Resource-Optimization" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <article class="card card-img reveal" data-cat="ml">
+        <div class="card-media"><img src="img/agri.jpg" alt="Aerial view of green fields with a digital sensor grid" loading="lazy"></div>
+        <div class="card-body">
+          <p class="card-cat">Machine Learning · Quantum Optimization</p>
+          <h3>Precision Agriculture — Yield &amp; Resource Optimization</h3>
+          <p>Yield prediction (R² 0.875) and water/fertilizer recommendation on fused WaPOR, climate and soil data — then the allocation is optimized three ways: classical search, QUBO brute force and Qiskit's exact solver. All three agree.</p>
+          <p class="card-metric">3 solvers · 1 identical optimum <strong>(280, 180)</strong></p>
+          <a class="card-link" href="https://github.com/mhamza6051/Precision-Agriculture-Yield-and-Resource-Optimization" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </article>
 
-      <article class="card" data-cat="dl">
-        <p class="card-cat">Deep Learning · Speech AI</p>
-        <h3>Urdu Speech Emotion Recognition</h3>
-        <p>Three approaches benchmarked on 400 Urdu voice clips: handcrafted features + SVM (F1 0.913), wav2vec2 embeddings + LR (0.877), and a spectrogram CNN that failed at chance level — documented and rejected, not hidden. Research demo, not a diagnostic tool.</p>
-        <p class="card-metric">SVM weighted F1 <strong>0.913</strong> · CV F1 <strong>0.953</strong></p>
-        <a class="card-link" href="https://github.com/mhamza6051/Urdu-Speech-Emotion-Recognition-and-Mental-Health-Screening" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <article class="card card-img reveal" data-cat="dl">
+        <div class="card-media"><img src="img/speech.jpg" alt="Colorful speech waveform and spectrogram" loading="lazy"></div>
+        <div class="card-body">
+          <p class="card-cat">Deep Learning · Speech AI</p>
+          <h3>Urdu Speech Emotion Recognition</h3>
+          <p>Three approaches benchmarked on 400 Urdu voice clips: handcrafted features + SVM (F1 0.913), wav2vec2 embeddings + LR (0.877), and a spectrogram CNN that failed at chance level — documented and rejected, not hidden. Research demo, not a diagnostic tool.</p>
+          <p class="card-metric">SVM weighted F1 <strong>0.913</strong> · CV F1 <strong>0.953</strong></p>
+          <a class="card-link" href="https://github.com/mhamza6051/Urdu-Speech-Emotion-Recognition-and-Mental-Health-Screening" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </article>
 
     </div>
 
-    <h2 class="more-title">All projects</h2>
-    <div class="filters">
+    <h2 class="more-title reveal">All projects</h2>
+    <div class="filters reveal">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="dl">Deep Learning</button>
       <button class="filter-btn" data-filter="ml">Machine Learning</button>
@@ -130,63 +153,63 @@
     </div>
     <div class="grid" id="projectGrid">
 
-      <article class="card" data-cat="ml">
+      <article class="card reveal" data-cat="ml">
         <p class="card-cat">Machine Learning · Software Quality</p>
         <h3>Software Defect Prediction + Metamorphic &amp; Adversarial Testing</h3>
         <p>Defect prediction for Java &amp; Python modules (F1 0.849 / AUC 0.918), proven 99.5%+ consistent under metamorphic testing — then shown fragile: adversarial attacks collapse accuracy from 0.875 to 0.125.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Software-Defect-Prediction-with-Metamorphic-and-Adversarial-Testing" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="ml">
+      <article class="card reveal" data-cat="ml">
         <p class="card-cat">Machine Learning · Food Safety</p>
         <h3>Milk Quality Screening</h3>
         <p>4-class milk grading on 10,000 samples with deliberate target-leakage control: the 7 adulterant-indicator features are excluded by design, and an interpretable logistic model is deployed over a higher-scoring forest.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Milk-Quality-Screening-Using-Machine-Learning" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="ml">
+      <article class="card reveal" data-cat="ml">
         <p class="card-cat">Machine Learning · Agriculture</p>
         <h3>Wheat Spoilage Prediction</h3>
         <p>Safe-vs-spoiled grain classification from humidity, gas and temperature sensor signals. Random Forest 86% accuracy; the simulated-data design is stated transparently in the README.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Wheat-Spoilage-Prediction-Using-Machine-Learning" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="ml">
+      <article class="card reveal" data-cat="ml">
         <p class="card-cat">Machine Learning · Time Series</p>
         <h3>Store Sales — Time Series Forecasting</h3>
         <p>Daily unit-sales forecasting for Corporación Favorita (54 stores × 33 product families) — the Kaggle Store Sales competition, with a full submission pipeline.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Store_Sales-Time_Series_Forecast" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="data">
+      <article class="card reveal" data-cat="data">
         <p class="card-cat">Dataset · Animal Science</p>
         <h3>Estrous Detection in Dairy Cattle — Dataset</h3>
         <p>A research dataset for estrus detection combining behavioral and physiological signals — steps, jumps, voice pitch, body temperature, mucus and hormone levels.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Estrous-Detection-in-Dairy-Cattles-Dataset" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="data">
+      <article class="card reveal" data-cat="data">
         <p class="card-cat">Data Wrangling</p>
         <h3>Data Wrangling — Auto Insurance Dataset</h3>
         <p>Raw-to-model-ready wrangling of 13,336 policies × 43 features: nulls, duplicates, outliers, correlation analysis and encoding toward the is_claim target.</p>
         <a class="card-link" href="https://github.com/mhamza6051/Data-Wrangling-of-insurance-dataset" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="data">
+      <article class="card reveal" data-cat="data">
         <p class="card-cat">Data Analysis · EDA</p>
         <h3>EDA — Titanic Dataset</h3>
         <p>Survival analysis of 891 passengers: how class, gender, age, port and fare patterned who lived — each effect quantified.</p>
         <a class="card-link" href="https://github.com/mhamza6051/EDA_Titanic_Dataset" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="data">
+      <article class="card reveal" data-cat="data">
         <p class="card-cat">Data Analysis · EDA</p>
         <h3>EDA — Movies (IMDb Ratings)</h3>
         <p>A question-driven analysis of 1,000 movies: 20+ explicit questions on what drives a rating — budget, genre, runtime, certification, directors.</p>
         <a class="card-link" href="https://github.com/mhamza6051/EDA_Movies_Dataset" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card" data-cat="data">
+      <article class="card reveal" data-cat="data">
         <p class="card-cat">Data Analysis · EDA</p>
         <h3>EDA — Amazon Sales</h3>
         <p>Pricing, discount and rating analysis across 1,465 Amazon products: what gets discounted, what gets rated well, and where the two meet.</p>
@@ -197,8 +220,8 @@
   </div>
 </section>
 
-<section id="contact" class="section section-alt">
-  <div class="container contact">
+<section id="contact" class="section section-alt contact-band">
+  <div class="container contact reveal">
     <h2>Contact</h2>
     <p class="lead">I'm looking for opportunities in AI, machine learning and deep learning.
     The fastest way to evaluate my work is the code itself — every project above is public.</p>
@@ -211,7 +234,7 @@
 
 <footer>
   <div class="container">
-    <p>© <span id="year"></span> Muhammad Hamza · Data Scientist — AI / ML / Deep Learning · Built with plain HTML/CSS and hosted free on GitHub Pages.</p>
+    <p>© <span id="year"></span> Muhammad Hamza · Data Scientist — AI / ML / Deep Learning · Built with plain HTML/CSS/JS and hosted free on GitHub Pages.</p>
   </div>
 </footer>
 
