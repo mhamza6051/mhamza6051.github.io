@@ -31,7 +31,7 @@ a:hover{text-decoration:underline}
 .nav-cta:hover{background:rgba(56,189,248,.12)}
 
 /* hero — cosmic midnight base + canvas backdrop (hero-canvas.js) */
-.hero{padding:76px 0 0;position:relative;overflow:hidden;background:
+.hero{padding:26px 0 0;position:relative;overflow:hidden;background:
   radial-gradient(1100px 520px at 78% 112%, rgba(168,85,247,.14), transparent 60%),
   radial-gradient(900px 500px at 86% -10%, rgba(0,240,255,.10), transparent 55%),
   linear-gradient(160deg,#060919 0%,#0B1126 100%)}
@@ -41,9 +41,16 @@ a:hover{text-decoration:underline}
   linear-gradient(90deg, rgba(6,9,25,.78) 0%, rgba(6,9,25,.55) 42%, rgba(6,9,25,.08) 72%, rgba(6,9,25,0) 100%),
   radial-gradient(700px 420px at 28% 45%, rgba(6,9,25,.50), transparent 70%)}
 .hero-inner{display:flex;gap:36px;align-items:flex-start;position:relative;z-index:2}
-.hero-text{flex:1;min-width:0;padding-bottom:58px}
+.hero-text{flex:1;min-width:0;padding-top:44px;padding-bottom:58px}
 .hero-portrait{flex-shrink:0;align-self:flex-end;line-height:0}
 .hero-portrait img{height:560px;width:auto;display:block;filter:drop-shadow(0 20px 36px rgba(0,0,0,.55))}
+/* wide screens: portrait stands full-height at the right, top just below the nav */
+@media (min-width:1025px){
+  .hero-inner{display:block;min-height:634px}
+  .hero-text{max-width:590px;padding:36px 0 64px}
+  .hero-portrait{position:absolute;right:0;bottom:0}
+  .hero-portrait img{height:660px}
+}
 .eyebrow{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin-bottom:10px}
 .hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:12px}
 .grad-text{background:var(--grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradslide 6s ease-in-out infinite alternate}
